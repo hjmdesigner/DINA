@@ -1,2 +1,22 @@
 # Policies configuration placeholder
 # Document access/control policies here
+
+allowlist:
+  - name: open_app
+    type: ahk
+    path: assistant/tools/ahk/open_app.ahk
+    schema:
+      app_name: { type: string, enum: ["notepad","calc","vscode"] }
+
+execution:
+  dry_run_default: true
+  require_confirmation: true
+
+security:
+  bind_address: "127.0.0.1"
+  block_raw_shell: true
+  working_dir_whitelist:
+    - assistant/tools
+
+logging:
+  audit_log: assistant/logs/tool_audit.log
