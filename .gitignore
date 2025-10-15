@@ -1,0 +1,4 @@
+# Git ignore placeholder
+__pycache__/
+.env
+node_modules/
