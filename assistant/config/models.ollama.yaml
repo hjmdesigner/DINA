@@ -1,2 +1,7 @@
 # Ollama models configuration placeholder
 # Define model endpoints and parameters here
+default_chat_model: phi4-mini
+coding_model: qwen2.5:3b-coder
+params:
+  temperature: 0.6
+  num_ctx: 8192
